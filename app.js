@@ -12,7 +12,8 @@ const fs = require('fs');
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/auth-sys');
+// mongoose.connect('mongodb://127.0.0.1:27017/auth-sys');
+mongoose.connect('mongodb://yourUsername:yourPassword@127.0.0.1:27017/auth-sys',);
 
 // Set the view engine
 app.set('view engine','ejs')
