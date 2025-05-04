@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose=require('mongoose');
 const express=require('express');
 const jwt=require('jsonwebtoken')
@@ -13,7 +14,7 @@ const fs = require('fs');
 
 
 // mongoose.connect('mongodb://127.0.0.1:27017/auth-sys');
-mongoose.connect('mongodb://yourUsername:yourPassword@127.0.0.1:27017/auth-sys',);
+mongoose.connect(process.env.MONGODB_URI,);
 
 // Set the view engine
 app.set('view engine','ejs')
